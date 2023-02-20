@@ -9,21 +9,20 @@ class Auto:
         self.registro = registro
         self.precio= precio
         
-        def cantidadAsientos(self):
-            numeroAsientos = 0
-            for Asiento in self.asientos: 
-                if isinstance(Asiento, asientos): #isinstance(object, type) returns a boolean when the object is in the type
-                    numeroAsientos += 1
-            return (cantidadAsientos)
-        
-        def VerificarIdentidad(self): 
-            if self.motor.registro != self.registro: 
-                return "Las piezas no son originales"
-            if self.asiento.registro != self.registro:
-                return "Las piezas no son originales"
-            else:
-                return "Auto Original"
-            return(VerificarIdentidad)
+    def cantidadAsientos(self):
+        numeroAsientos = 0
+        for Asiento in self.asientos: 
+            if isinstance(self.asientos, Asiento): #isinstance(object, type) returns a boolean when the object is in the type
+                numeroAsientos += 1
+        return (numeroAsientos)
+    
+    def VerificarIdentidad(self): 
+        if self.motor.registro != self.registro: 
+            return "Las piezas no son originales"
+        if self.asiento.registro != self.registro:
+            return "Las piezas no son originales"
+        else:
+            return "Auto Original"
 
 class Asiento: 
     def __init__ (self, color, precio, registro):
@@ -31,11 +30,11 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-        def cambiarColor(self,colores):
-            colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
-            if color in colores: 
-                self.color = color
-            return(cambiarColor)
+    def cambiarColor(self,color):
+        colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
+        if color in colores: 
+            self.color = color
+        #return(cambiarColor)
 
 class Motor: 
     def __init__(self,numeroCilinros, tipo, registro):
@@ -43,15 +42,15 @@ class Motor:
         self.tipo = tipo
         self.registro = registro
 
-        def cambiarRegistro (self, registro):
-            registronuevo = int(input())
-            if registronuevo != registro:
-                self.registro = registronuevo
-            #return(cambiarRegistro)      
+    def cambiarRegistro (self, registro):
+        registronuevo = int(input())
+        if registronuevo != registro:
+            self.registro = registronuevo
+        #return(cambiarRegistro)      
 
-        def asignarTipo(self, tipo):
-            tipos =["electrico", "gasolina"]
-            tiponuevo = str(input())
-            if tiponuevo in tipos:
-                self.tipo = tiponuevo
+    def asignarTipo(self, tipo):
+        tipos =["electrico", "gasolina"]
+        tiponuevo = str(input())
+        if tiponuevo in tipos:
+            self.tipo = tiponuevo
             
