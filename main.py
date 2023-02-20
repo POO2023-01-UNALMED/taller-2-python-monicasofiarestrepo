@@ -11,8 +11,8 @@ class Auto:
         
     def cantidadAsientos(self):
         numeroAsientos = 0
-        for Asiento in self.asientos: 
-            if isinstance(self.asientos, Asiento): #isinstance(object, type) returns a boolean when the object is in the type
+        for asiento in self.asientos: 
+            if isinstance(self.asientos, asiento): #isinstance(object, type) returns a boolean when the object is in the type
                 numeroAsientos += 1
         return (numeroAsientos)
     
