@@ -16,7 +16,7 @@ class Auto:
                 numeroAsientos += 1
         return (numeroAsientos)
     
-    def VerificarIdentidad(self): 
+    def verificarIdentidad(self): 
         if self.motor.registro != self.registro: 
             return "Las piezas no son originales"
         if self.asiento.registro != self.registro:
@@ -34,7 +34,6 @@ class Asiento:
         colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
         if color in colores: 
             self.color = color
-        #return(cambiarColor)
 
 class Motor: 
     def __init__(self,numeroCilinros, tipo, registro):
@@ -45,8 +44,7 @@ class Motor:
     def cambiarRegistro (self, registro):
         registronuevo = int(input())
         if registronuevo != registro:
-            self.registro = registronuevo
-        #return(cambiarRegistro)      
+            self.registro = registronuevo     
 
     def asignarTipo(self, tipo):
         tipos =["electrico", "gasolina"]
