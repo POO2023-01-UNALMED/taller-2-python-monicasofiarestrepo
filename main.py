@@ -26,7 +26,7 @@ class Auto:
             return(VerificarIdentidad)
 
 class Asiento: 
-    def _init_ (self, color, precio, registro):
+    def __init__ (self, color, precio, registro):
         self.color = color
         self.precio = precio
         self.registro = registro
@@ -38,7 +38,7 @@ class Asiento:
             return(CambiarColor)
 
 class Motor: 
-    def _init_(self,numeroCilinros, tipo, registro):
+    def __init__(self,numeroCilinros, tipo, registro):
         self.numeroCilindros = numeroCilinros
         self.tipo = tipo
         self.registro = registro
