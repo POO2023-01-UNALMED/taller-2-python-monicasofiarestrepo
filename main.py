@@ -19,10 +19,12 @@ class Auto:
     def verificarIntegridad(self): 
         if self.motor.registro != self.registro: 
             return "Las piezas no son originales"
-        if self.asientos.registro != self.registro:
-            return "Las piezas no son originales"
-        else:
-            return "Auto Original"
+        
+        for asiento in self.asientos:
+            if asiento != None: 
+                if asiento.registro != self.registro:
+                    return "Las piezas no son originales"
+        return "Auto Original"
 
 class Asiento: 
     def __init__ (self, color, precio, registro):
@@ -30,25 +32,22 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-    def cambiarColor(self,color):
+    def cambiarColor(self, color):
         colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
         if color in colores: 
             self.color = color
 
 class Motor: 
-    def __init__(self,numeroCilinros, tipo, registro):
+    def __init__(self, numeroCilinros, tipo, registro):
         self.numeroCilindros = numeroCilinros
         self.tipo = tipo
         self.registro = registro
 
     def cambiarRegistro (self, registro):
-        registronuevo = int(input())
-        if registronuevo != registro:
-            self.registro = registronuevo     
+        self.registro = registro    
 
     def asignarTipo(self, tipo):
         tipos =["electrico", "gasolina"]
-        tiponuevo = str(input())
-        if tiponuevo in tipos:
-            self.tipo = tiponuevo
+        if tipo in tipos:
+            self.tipo = tipo
             
