@@ -28,7 +28,7 @@ class Auto:
         if self.motor.registro != self.registro: 
             return "Las piezas no son originales" 
 
-        return "Auto Original"
+        return "Auto original"
 
 class Asiento: 
     def __init__ (self, color, precio, registro):
